@@ -8,7 +8,7 @@ const server = require('./src/server.js');
 
 //connect db
 mongoose
-  .connect('mongodb://localhost:27017/auth', {
+  .connect(process.env.MONGOOSE_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
